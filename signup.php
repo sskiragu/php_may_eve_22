@@ -31,16 +31,9 @@
         $pwd =  $_POST['password'];
         $encryted_pwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-        //Define the db credentials
-        $db_host = 'localhost';
-        $db_user = 'root';
-        $db_password = '';
-        $db_name = 'may_22';
-
-        $db_connect = new mysqli($db_host, $db_user, $db_password, $db_name);
-        if($db_connect->connect_error){
-            echo "Failed";
-        }
+        // include 'dbConnect.php';
+        // include_once 'dbConnect.php';
+        require 'dbConnect.php';
 
         $sql = "INSERT INTO details(username, email, password) VALUES('$usr', '$em', '$encryted_pwd')";
 

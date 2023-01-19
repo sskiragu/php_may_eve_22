@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'topHeader.php'?>
-    <h1>Welcome Home</h1>
+<?php include 'topHeader.php'?>
+    <h1>About us</h1>
 </body>
 </html>
