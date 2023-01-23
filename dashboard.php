@@ -14,7 +14,29 @@
 </head>
 <body>
     <div class="top-nav">
-        <a href="view.php">View</a>
+        <a href="dashboard.php?id=profile">Profile</a>
+        <a href="dashboard.php?id=users">View Users</a>
+        <a href="dashboard.php?id=reports">Reports</a>
+        <a href="dashboard.php?id=logout">Logout</a>
+    </div>
+    <div>
+        <?php
+            if(isset($_GET['id'])){
+                $selected =  $_GET['id'];
+                switch ($selected) {
+                    case 'users':
+                        include_once 'view.php';
+                        break;
+                    case 'profile':
+                        include_once 'profile.php';
+                        break;
+                    
+                    default:
+                        # code...
+                        break;
+                }
+            }
+        ?>
     </div>
 </body>
 </html>
